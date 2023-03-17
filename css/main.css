@@ -1,0 +1,77 @@
+
+
+
+body {
+    background-color:#937e5c;
+}
+header {
+    background-color:#705c3d; border-top-left-radius:10px; border-top-right-radius:10px; padding:10px;
+}
+#logo {
+    width: 75px; height: 50px; float: left; margin-right: 10px;
+}
+#title {
+    margin: 0;
+    margin-top: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+	color:#ffffff; font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:xx-large;
+}
+p {
+    color:#ffffff; font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:1em;
+}
+main {
+    background-color:#705c3d; /* this is where code is missing for background color */
+}
+aside {
+    background-color:#705c3d; border-radius:10px;
+}
+footer {
+    background-color:#937e5c; border-radius:10px; padding:10px;
+}
+nav ul {
+    margin: 0px; padding: 0px; overflow:hidden; padding-bottom: 30px;
+}
+nav li {
+    border:2px solid #937e5c; accent-color:#31230c; background-color:#937e5c; list-style-type:none; float: left; width: 15%; padding: 16px;
+}
+nav li a {
+    color:#ffffff; text-align:center; text-decoration:none;
+}
+nav li:hover {
+    background-color:#31230c;
+}
+.active {
+    background-color:#705c3d;
+}
+table {
+    color:#ffffff; font-family:Verdana, Geneva, Tahoma, sans-serif; width:75%;
+}
+table tr:nth-child(even) {
+    background-color:#77623f;
+}
+table th {
+    background-color:#937e5c; color:white;
+}
+.colLeft {
+    width: 50%; float: left; margin-right: 20px;
+}
+.colRight {
+    padding: 10px;
+}
+fieldset {
+    margin: 20px;
+}
+#home-carousel {
+    padding: 20px;
+}
+.gallery-img {
+    height: 100%;
+    width: 100%;
+}
+#img-gallery {
+    padding-top: 10px;
+}
+#img-gallery .row {
+    margin-bottom: 10px;
+}
