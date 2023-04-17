@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta charset=UTF-8>
+        <title>Piano.</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="images/logo.jpg" alt="logo" id="logo"><h1 id="title">Piano.</h1>
+        </header>
+        <!-- navigation bar -->
+        <nav>
+            <div>
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="img_gallery.html">Gallery</a></li>
+                    <li class="active"><a href="current_members.html">Current Members</a></li>
+                    <li class="active"><a href="event_calendar.html">Events</a></li>
+                    <li class="active"><a href="contact_us.html">Contact Us</a></li>
+                    <li class="active"><a href="top_compositions.html">Top Compositions</a></li>
+                    <li class="active"><a href="grand_brands.html">Grand Piano Brands</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- youtube video container-->
+        <main>
+            <h4>The best of the best.<br>Have a listen:</h4> <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <p>Ludwig van Beethoven - Moonlight Sonata</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4Tr0otuiQuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-sm">
+                        <p>Claude Debussy - Clair de Lune</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WNcsUNKlAKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <p>Frédéric Chopin - Nocturne in E flat major (Op. 9, No. 2)</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9E6b3swbnWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-sm">
+                        <p>Franz Liszt - La Campanella</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/H1Dvg2MxQn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <p>Frédéric Chopin - Winter Wind (Op. 25 No. 11)</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gZjdAWgjLx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-sm">
+                        <p>Frédéric Chopin - Nocturne in C Sharp Minor (No. 20)</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DqpPRj6UZqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- form integration -->
+        <aside>
+            <form id="song_submit">
+                <fieldset>
+                    <legend><h1>Tell us your favourite composition!</h1></legend>
+
+                    <label for="composer">Composer:</label>
+                    <input type="text" id="composer" value=""> <br>
+
+                    <label for="song">Name of Composition:</label>
+                    <input type="text" id="song" value=""> <br>
+
+                    <button type="button" onclick='send_form("form_outcome")'>Submit</button>
+                </fieldset>
+            </form>
+            <div>
+                <p id="form_outcome"></p>
+            </div>
+        </aside>
+        <footer>
+            <p>Copyright Olik :)</p>
+        </footer>
+        <script>
+            // form submit button script
+            function send_form(id){
+                var composer = document.forms["song_submit"]["composer"].value;
+                var song = document.forms["song_submit"]["song"].value;
+                if (composer == "") {
+                    alert("A composition must have a composer!");
+                }
+                else {
+                    if (song == "") {
+                        alert("A composition must have a name!");
+                    }
+                    else {
+                        document.getElementById(id).innerHTML="Composition submitted! Thank you for your opinion!";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

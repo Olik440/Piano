@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en-GB">
     <head>
+        <meta charset=UTF-8>
         <title>Piano.</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -8,6 +11,7 @@
         <header>
             <img src="images/logo.jpg" alt="logo" id="logo"><h1 id="title">Piano.</h1>
         </header>
+        <!-- navigation bar -->
         <nav>
             <div>
                 <ul>
@@ -16,10 +20,13 @@
                     <li class="active"><a href="current_members.html">Current Members</a></li>
                     <li class="active"><a href="event_calendar.html">Events</a></li>
                     <li class="active"><a href="contact_us.html">Contact Us</a></li>
+                    <li class="active"><a href="top_compositions.html">Top Compositions</a></li>
+                    <li class="active"><a href="grand_brands.html">Grand Piano Brands</a></li>
                 </ul>
             </div>
         </nav>
         <main>
+            <!-- events table -->
             <div id="tableDiv">
                 <table class="table">
                     <tr>
@@ -53,22 +60,54 @@
                         <th>Week 9</th> <td></td> <td>Practice, feedback & recording<br> In person - Piano Studio</td> <td></td> <td></td> <td></td> <td></td> <td></td>
                     </tr>
                     <tr>
-                        <th>Week 10</th> <td>break</td>
+                        <th>Week 10</th> <td colspan="7" style="text-align:center;">break</td>
                     </tr>
                     <tr>
-                        <th>Week 11</th> <td>break</td>
+                        <th>Week 11</th> <td colspan="7" style="text-align:center;">break</td>
                     </tr>
                     <tr>
                         <th>Week 12</th> <td></td> <td></td> <td>Special Guest!!11! <br> In person - Piano Studio</td> <td></td> <td></td> <td></td> <td></td>
                     </tr>
                 </table>
             </div>
-        </main>
-        <aside>
+            <!-- add event form -->
+            <div>
+                <p>Want to recommend an event? Tell us below!</p>
+                <form name="event">
+                    <fieldset>
+                        <legend><h1>Events</h1></legend>
+    
+                        <label for="event_title">Title:</label>
+                        <input type="text" id="event_title" value=""> <br>
+    
+                        <label for="event_date">Date:</label>
+                        <input type="text" id="event_date" value=""> <br>
 
-        </aside>
+                        <button type="button" onclick='submit_event()'>Submit Event</button>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
         <footer>
             <p>Copyright Olik :)</p>
         </footer>
+        <!-- form script -->
+        <script>
+            function submit_event() {
+                var title = document.forms["event"]["event_title"].value;
+                var date = document.forms["event"]["event_date"].value;
+                if (title == "") {
+                    alert("An event must have a title!");
+                }
+                else {
+                    if (date.length == 0) {
+                        alert("An event must have a date!");
+                    }
+                    else {
+                        alert("Event submitted! The society will contact you soon!");
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
